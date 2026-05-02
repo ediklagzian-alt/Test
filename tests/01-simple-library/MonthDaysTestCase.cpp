@@ -41,3 +41,7 @@ TEST(GetMonthDaysTest, ThirtyOneDayMonths) {
     EXPECT_EQ(GetMonthDays(2021, 10), 31);
     EXPECT_EQ(GetMonthDays(2021, 12), 31);
 }
+
+TEST(GetMonthDaysTest, InvalidYearInFebruary) {
+    EXPECT_THROW(GetMonthDays(0, 2), std::invalid_argument);
+}
